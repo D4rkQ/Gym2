@@ -1,0 +1,30 @@
+Es soll ein Fitnessstudio mit Mitgliedern und Trainigplänen modeliert werden.
+Die Trainingspläne sollen Informationen über Kraftübungen und Ausdauerübungen enthalten.
+Ein Trainningsplan besteht aus einer Liste von Geräteübungen, Geräteübungen bestehen wiederum aus Kraftsätzen oder Ausdauersätzen.
+Die Sätze bestehen wiederum aus Kraftübungen oder Asudauerübungen. Diese Strucktur soll mittels Composite-Pattern abgebildet werden.
+Hieraus lassen sich mit hilfe des Patterns foglende Fragen beantworten:
+ 
+-Bewegte Gesamtmasse über Trainigsplan.
+-Gesamtdauer Ausdauertrainig pro Trainigsplan.
+-Gesamtkalorienverbrauch der Ausdauerübungen
+-Trainierte Muskulatur des Trainingsplan
+-durchschnittliche Schwierigkeit der Übungen.
+-Anzahl der PowerExercises
+-Anzahl der EnduranceExercises
+
+Im Kopf des Trainingsplan ist das Miglied des Fitnessstudios hinterlegt für welches der Traninigsplan erstellt wurde.
+Der Fitnesszustand der Mitglieder kann auf verschiedene Arten gemessen werden:
+Body Mass Index (BMI), 
+Fettfreier Masse Index (FFMI).
+
+In der Eingewöhnungsphase kann zwischen den Verschiedenen Berechnungsarten mittels Strategy Pattern hin und her gewechselt werden.
+Sobald ein Mitglieder einem Trainingsplan zugeordnet wird soll die Berechnugsart mittels Builder Pattern festgeschrieben werden.
+Somit ist gewährleistet das während eines Trainigsplan immer mit dem gleichen Masstab gemessen wird.
+
+Veranschaulichung Hierachrie des Trainingsplans:
+
+Trainigsplan(Mitlglied, ListeGeräteübungen)
+-GeräteÜbung(KraftSatz(Kraftübung(name, Beschreibung, Muskulatur, schwierigkeitsgrad)+Anzahl_wdh.+Gewicht)+Anzahl_sätze)
+-GeräteÜbung(AusdauerSatz(Ausdauerübung(name, Beschreibung, kalorienverbrauchProZeiteinheit)+dauer))
+
+
