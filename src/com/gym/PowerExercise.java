@@ -5,18 +5,18 @@ import java.util.List;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class PowerExercise extends AbstractWorkoutplanEntity{
 
     private final String name;
-    private final String desctiption;
+    private final String description;
     private final List<String> muscles;
     private final int difficulty;
 
-    public PowerExercise(String name, String desctiption, List<String> muscles, int difficulty) {
+    public PowerExercise(String name, String description, List<String> muscles, int difficulty) {
         this.name = name;
-        this.desctiption = desctiption;
+        this.description = description;
         this.muscles = muscles;
         this.difficulty = difficulty;
     }
@@ -25,8 +25,8 @@ public class PowerExercise extends AbstractWorkoutplanEntity{
         return name;
     }
 
-    public String getDesctiption() {
-        return desctiption;
+    public String getDescription() {
+        return description;
     }
 
     public List<String> getMuscles() {
@@ -56,7 +56,7 @@ public class PowerExercise extends AbstractWorkoutplanEntity{
     public String toString() {
         return "PowerExercise{" +
                 "name='" + name + '\'' +
-                ", desctiption='" + desctiption + '\'' +
+                ", description='" + description + '\'' +
                 ", muscles=" + muscles +
                 ", difficulty=" + difficulty +
                 '}';

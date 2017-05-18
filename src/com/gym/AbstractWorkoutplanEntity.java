@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Project: Gym
  * Created by Marcel Sailer on 18.05.2017.
  */
 public abstract class AbstractWorkoutplanEntity implements WorkoutplanEntity {

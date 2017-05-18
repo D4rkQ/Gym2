@@ -2,7 +2,7 @@ package com.gym;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class Member implements IsMember{
 
@@ -10,7 +10,7 @@ public class Member implements IsMember{
     private final double size;
     private final double weight;
     private final int bodyFatRatio;
-    private final  FitnessLevelStrategy fitnessLevelStrategy;
+    private final FitnessLevelStrategy fitnessLevelStrategy;
 
     public Member(String name, double size, double weight, int bodyFatRatio, FitnessLevelStrategy fitnessLevelStrategy) {
         this.name = name;

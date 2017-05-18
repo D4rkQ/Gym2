@@ -2,7 +2,7 @@ package com.gym;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class MemberBuilder implements IsMember{
 
@@ -20,6 +20,11 @@ public class MemberBuilder implements IsMember{
         this.fitnessLevelStrategy = fitnessLevelStrategy;
     }
 
+    public Member build(){
+        return new Member(name, size, weight, bodyFatRatio, fitnessLevelStrategy);
+    }
+
+    @Override
     public double calcFitnesslevel(){
         return fitnessLevelStrategy.calculate(this);
     }
@@ -44,10 +49,6 @@ public class MemberBuilder implements IsMember{
         return fitnessLevelStrategy;
     }
 
-    public void setFitnessLevelStrategy(FitnessLevelStrategy fitnessLevelStrategy) {
-        this.fitnessLevelStrategy = fitnessLevelStrategy;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -64,8 +65,8 @@ public class MemberBuilder implements IsMember{
         this.bodyFatRatio = bodyFatRatio;
     }
 
-    public Member build(){
-        return new Member(name, size, weight, bodyFatRatio, fitnessLevelStrategy);
+    public void setFitnessLevelStrategy(FitnessLevelStrategy fitnessLevelStrategy) {
+        this.fitnessLevelStrategy = fitnessLevelStrategy;
     }
 
     @Override

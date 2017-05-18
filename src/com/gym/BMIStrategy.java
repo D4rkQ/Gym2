@@ -2,10 +2,10 @@ package com.gym;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class BMIStrategy implements FitnessLevelStrategy {
-
+    //Body-Mass-Index
     @Override
     public double calculate(IsMember isMember) {
         double bmi;
@@ -15,7 +15,4 @@ public class BMIStrategy implements FitnessLevelStrategy {
 
         return bmi;
     }
-
-
-
 }

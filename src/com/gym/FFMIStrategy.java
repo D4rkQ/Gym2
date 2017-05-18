@@ -2,9 +2,11 @@ package com.gym;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class FFMIStrategy implements FitnessLevelStrategy {
+
+    //Fat-Free-Muscle-Index
     @Override
     public double calculate(IsMember isMember) {
         double ffm = 0;
@@ -16,7 +18,4 @@ public class FFMIStrategy implements FitnessLevelStrategy {
 
         return ffmi;
     }
-
-
-
 }

@@ -3,6 +3,7 @@ package com.gym;
 import java.util.List;
 
 /**
+ * Project: Gym
  * Created by Marcel Sailer on 18.05.2017.
  */
 public interface WorkoutplanEntity {
@@ -14,6 +15,5 @@ public interface WorkoutplanEntity {
     double avgDifficulty();
     int getAmountOfPowerExercises();
     int getAmountOfEnduranceExercises();
-
 
 }

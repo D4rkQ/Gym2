@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class MachineExercise extends AbstractWorkoutplanEntity{
 
@@ -23,7 +23,6 @@ public class MachineExercise extends AbstractWorkoutplanEntity{
     public WorkoutplanEntity getSet() {
         return set;
     }
-
 
     @Override
     public double avgDifficulty() {

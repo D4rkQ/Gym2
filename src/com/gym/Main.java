@@ -1,31 +1,33 @@
 package com.gym;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Project: Gym
+ * Created by Marcel Sailer on 18.05.2017.
+ */
 public class Main {
 
     public static void main(String[] args) {
 
-        //Members, Builders and Strategies
+        //Gym-Members with Builders and Strategies
 
         MemberBuilder memberBuilder = new MemberBuilder("Martha", 1.65, 65, 30, new BMIStrategy());
 
         System.out.println(memberBuilder);
-        System.out.println("Fitnesslevel " + "of " + memberBuilder.getName() + " calculated with BMI Strategy is " + memberBuilder.calcFitnesslevel());
+        System.out.println("Fitnesslevel " + "of " + memberBuilder.getName() +
+                " calculated with BMI-Strategy is " + memberBuilder.calcFitnesslevel());
 
         memberBuilder.setFitnessLevelStrategy(new FFMIStrategy());
-        System.out.println("Fitnesslevel " + "of " + memberBuilder.getName() + " calculated with FFMI Strategy is " + memberBuilder.calcFitnesslevel());
+        System.out.println("Fitnesslevel " + "of " + memberBuilder.getName() +
+                " calculated with FFMI-Strategy is " + memberBuilder.calcFitnesslevel());
 
         Member member = memberBuilder.build();
-        System.out.println("Martha is now builded her Fitnesslevel and some other Attributes are finally set");
-        System.out.println(member);
+        System.out.println("Martha is now builded, her fitnesslevel and some other attributes are finally set!");
+        System.out.println(member+"\n");
 
-        System.out.println();
-
-        //Generating a Workoutplan in a Composite
+        //Generating a Workoutplan in a Compositestyle
 
         List<MachineExercise> machineExerciseList = new ArrayList<>();
 
@@ -61,7 +63,7 @@ public class Main {
         Workoutplan workoutplan = new Workoutplan(member, machineExerciseList);
 
         //Composite Power Questions
-        System.out.println("Average difficulty of the Woroutplan: " + workoutplan.avgDifficulty() + " (0 = very easy, 10 = very difficult)");
+        System.out.println("Average difficulty of the Workoutplan: " + workoutplan.avgDifficulty() + " (0 = very easy, 10 = very difficult)");
         System.out.println("Moved weight of the Workoutplan: " + workoutplan.movedWeightOnPower() + " kg");
         System.out.println("Trained muscles on the Workoutplan: " + workoutplan.musclesOnPower());
         System.out.println("Amount of power exercises of the Workoutplan: " + workoutplan.getAmountOfPowerExercises());
@@ -71,8 +73,14 @@ public class Main {
         //Composite Endurance Questions
         System.out.println("Hours spend on endurance exercises: " + workoutplan.timeOneEndurance() + " hours");
         System.out.println("Calories burned on endurance exercises: " + workoutplan.caloriesOnEndurance() + " kcal");
-        System.out.println("Amount of endurance exercises of the Workoutplan: " + workoutplan.getAmountOfEnduranceExercises());
+        System.out.println("Amount of endurance exercises of the Workoutplan: " + workoutplan.getAmountOfEnduranceExercises()+"\n");
 
+        //Martha lost some weight trough her Training
+        System.out.println(member.getName() + " lost weight trough her training");
+        memberBuilder.setWeight(62);
+        member = memberBuilder.build();
+
+        System.out.println("Her new FFMI is: " + member.calcFitnesslevel());
 
     }
 }

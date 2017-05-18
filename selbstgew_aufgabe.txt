@@ -12,19 +12,19 @@ Hieraus lassen sich mit hilfe des Patterns foglende Fragen beantworten:
 -Anzahl der PowerExercises
 -Anzahl der EnduranceExercises
 
-Im Kopf des Trainingsplan ist das Miglied des Fitnessstudios hinterlegt für welches der Traninigsplan erstellt wurde.
+Im Trainingsplan ist das Miglied des Fitnessstudios hinterlegt für welches der Traninigsplan erstellt wurde.
 Der Fitnesszustand der Mitglieder kann auf verschiedene Arten gemessen werden:
 Body Mass Index (BMI), 
 Fettfreier Masse Index (FFMI).
 
 In der Eingewöhnungsphase kann zwischen den Verschiedenen Berechnungsarten mittels Strategy Pattern hin und her gewechselt werden.
 Sobald ein Mitglieder einem Trainingsplan zugeordnet wird soll die Berechnugsart mittels Builder Pattern festgeschrieben werden.
-Somit ist gewährleistet das während eines Trainigsplan immer mit dem gleichen Masstab gemessen wird.
+Somit ist gewährleistet das während eines Trainingsplan immer mit dem gleichen Masstab gemessen wird.
 
 Veranschaulichung Hierachrie des Trainingsplans:
 
-Trainigsplan(Mitlglied, ListeGeräteübungen)
--GeräteÜbung(KraftSatz(Kraftübung(name, Beschreibung, Muskulatur, schwierigkeitsgrad)+Anzahl_wdh.+Gewicht)+Anzahl_sätze)
--GeräteÜbung(AusdauerSatz(Ausdauerübung(name, Beschreibung, kalorienverbrauchProZeiteinheit)+dauer))
+Workoutplan(Member, ListMachineExercises)
+-MachinesExercise(PowerSet(PowerExecise(name, description, muscles, difficulty)+Amount_replys.+Weight)+Amount_sets)
+-MachinesExercise(EnduranceSet(EnuranceExercise(name, desctiption, calorieCosumntioPerHour)+duration))
 
 

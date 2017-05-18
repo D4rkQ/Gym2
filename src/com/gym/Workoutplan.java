@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class Workoutplan extends AbstractWorkoutplanEntity {
 
@@ -29,8 +29,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public double avgDifficulty() {
         double tmp = 0;
-        for (MachineExercise x : machineExerciseList) {
-            tmp += x.avgDifficulty();
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp += machineExercise.avgDifficulty();
         }
         return tmp / this.getAmountOfPowerExercises();
     }
@@ -38,8 +38,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public double movedWeightOnPower() {
         double tmp = 0;
-        for (MachineExercise x : machineExerciseList) {
-            tmp += x.movedWeightOnPower();
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp += machineExercise.movedWeightOnPower();
         }
         return tmp;
     }
@@ -47,8 +47,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public List<String> musclesOnPower() {
         List<String> tmp = new ArrayList<>();
-        for (MachineExercise x : machineExerciseList) {
-            tmp.addAll(x.musclesOnPower());
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp.addAll(machineExercise.musclesOnPower());
         }
         return tmp;
     }
@@ -56,8 +56,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public double timeOneEndurance() {
         double tmp = 0;
-        for (MachineExercise x : machineExerciseList) {
-            tmp += x.timeOneEndurance();
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp += machineExercise.timeOneEndurance();
         }
         return tmp/60.0;
     }
@@ -65,8 +65,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public double caloriesOnEndurance() {
         double tmp = 0;
-        for (MachineExercise x : machineExerciseList) {
-            tmp += x.caloriesOnEndurance();
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp += machineExercise.caloriesOnEndurance();
         }
         return tmp;
     }
@@ -74,8 +74,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public int getAmountOfPowerExercises() {
         int tmp = 0;
-        for (MachineExercise x : machineExerciseList) {
-            tmp += x.getAmountOfPowerExercises();
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp += machineExercise.getAmountOfPowerExercises();
         }
         return tmp;
     }
@@ -83,8 +83,8 @@ public class Workoutplan extends AbstractWorkoutplanEntity {
     @Override
     public int getAmountOfEnduranceExercises() {
         int tmp = 0;
-        for (MachineExercise x : machineExerciseList) {
-            tmp += x.getAmountOfEnduranceExercises();
+        for (MachineExercise machineExercise : machineExerciseList) {
+            tmp += machineExercise.getAmountOfEnduranceExercises();
         }
         return tmp;
     }

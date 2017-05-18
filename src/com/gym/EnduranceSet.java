@@ -2,7 +2,7 @@ package com.gym;
 
 /**
  * Project: Gym
- * Created by Max on 15.05.2017.
+ * Created by Marcel Sailer on 15.05.2017.
  */
 public class EnduranceSet extends AbstractWorkoutplanEntity{
 
