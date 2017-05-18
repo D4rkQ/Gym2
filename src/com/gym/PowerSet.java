@@ -8,18 +8,18 @@ import java.util.List;
  */
 public class PowerSet extends AbstractWorkoutplanEntity{
 
-    private final int amountOfreps;
+    private final int amountOfReps;
     private final double weight;
     private final PowerExercise powerExercise;
 
-    public PowerSet(int amountOfreps, double weight, PowerExercise powerExercise) {
-        this.amountOfreps = amountOfreps;
+    public PowerSet(int amountOfReps, double weight, PowerExercise powerExercise) {
+        this.amountOfReps = amountOfReps;
         this.weight = weight;
         this.powerExercise = powerExercise;
     }
 
-    public int getAmountOfreps() {
-        return amountOfreps;
+    public int getAmountOfReps() {
+        return amountOfReps;
     }
 
     public double getWeight() {
@@ -37,7 +37,7 @@ public class PowerSet extends AbstractWorkoutplanEntity{
 
     @Override
     public double movedWeightOnPower() {
-        return amountOfreps*weight;
+        return amountOfReps *weight;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class PowerSet extends AbstractWorkoutplanEntity{
     @Override
     public String toString() {
         return "PowerSet{" +
-                "amountOfreps=" + amountOfreps +
+                "amountOfReps=" + amountOfReps +
                 ", weight=" + weight +
                 ", powerExercise=" + powerExercise +
                 '}';

@@ -9,12 +9,12 @@ package com.gym;
 public class EnduranceExercise extends AbstractWorkoutplanEntity{
 
     private final String name;
-    private final String desctiption;
+    private final String description;
     private final int calorieConsumptionPerHour;
 
-    public EnduranceExercise(String name, String desctiption, int calorieConsumptionPerHour) {
+    public EnduranceExercise(String name, String description, int calorieConsumptionPerHour) {
         this.name = name;
-        this.desctiption = desctiption;
+        this.description = description;
         this.calorieConsumptionPerHour = calorieConsumptionPerHour;
     }
 
@@ -22,8 +22,8 @@ public class EnduranceExercise extends AbstractWorkoutplanEntity{
         return name;
     }
 
-    public String getDesctiption() {
-        return desctiption;
+    public String getDescription() {
+        return description;
     }
 
     public int getCalorieConsumptionPerHour() {
@@ -44,7 +44,7 @@ public class EnduranceExercise extends AbstractWorkoutplanEntity{
     public String toString() {
         return "EnduranceExercise{" +
                 "name='" + name + '\'' +
-                ", desctiption='" + desctiption + '\'' +
+                ", description='" + description + '\'' +
                 ", calorieConsumptionPerHour=" + calorieConsumptionPerHour +
                 '}';
     }

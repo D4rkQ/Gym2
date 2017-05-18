@@ -25,6 +25,6 @@ Veranschaulichung Hierachrie des Trainingsplans:
 
 Workoutplan(Member, ListMachineExercises)
 -MachinesExercise(PowerSet(PowerExecise(name, description, muscles, difficulty)+Amount_replys.+Weight)+Amount_sets)
--MachinesExercise(EnduranceSet(EnuranceExercise(name, desctiption, calorieCosumntioPerHour)+duration))
+-MachinesExercise(EnduranceSet(EnuranceExercise(name, description, calorieCosumntioPerHour)+duration))
 
 
